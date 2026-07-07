@@ -65,6 +65,13 @@ while True:
         skills.append(new_skill)
         print("Skill Added Successfully")
 
+    elif choice == "2":
+        if not skills:
+            print("No Skills Found")
+        else:
+            print("My Skills: ")
+            for skill in skills:
+                print("-",skill)
 
     elif choice == "5":
         print("Exiting program....")
