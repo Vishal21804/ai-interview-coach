@@ -38,7 +38,7 @@ candidate = {
 
 print("Name : ",candidate["name"])
 print("Target Role: ",candidate["target_role"])
-print("skills: ",",".join(candidate["skills"]))
+print("Skills: ",",".join(candidate["skills"]))
 print("Total Skills: ",len(candidate["skills"]))
 
 while True:
@@ -49,7 +49,28 @@ while True:
     print("4.Remove Skills")
     print("5.Exit")
     
-    choice = int(input("Enter your Choice: "))
-    if choice == 5:
+    choice = input("Enter your Choice: ").strip()
+
+    if choice == "1":
+        new_skill = input("Enter New Skill: ")
+
+        if not new_skill:
+            print("Skill cannot be empty")
+            continue
+
+        if new_skill.lower() in [item.lower() for item in skills]:
+            print("Skill already exist")
+            continue
+
+        skills.append(new_skill)
+        print("Skill Added Successfully")
+
+
+    elif choice == "5":
         print("Exiting program....")
         break
+
+
+
+
+
