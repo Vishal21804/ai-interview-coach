@@ -3,8 +3,10 @@ target_role = input("Enter the target role: ")
 
 skills = []
 
-for i in range(3):
-    skill = input("Enter role: ")
+while True:
+    skill = input("Add Skill (type 'done' to stop): ")
+    if skill.lower()=="done":
+        break
     skills.append(skill)
 
 candidate = {
