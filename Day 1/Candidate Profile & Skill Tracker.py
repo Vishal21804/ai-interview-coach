@@ -14,10 +14,21 @@ while True:
 skills = []
 
 while True:
-    skill = input("Add Skill (type 'done' to stop): ")
+    skill = input("Add Skill (type 'done' to stop): ").strip()
     if skill.lower()=="done":
         break
+
+    if not skill:
+        print("Skill Cannot be empty")
+        continue
+
+    if skill.lower() in [item.lower() for item in skills]:
+        print("Skill already exist")
+        continue
+
     skills.append(skill)
+    print("Skill Added Successfully")
+    
 
 candidate = {
     "name":name,
