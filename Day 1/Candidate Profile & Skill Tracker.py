@@ -5,7 +5,11 @@ while True:
         break
     print("Invalid name")
 
-target_role = input("Enter the target role: ")
+while True:
+    target_role = input("Enter the target role: ").strip()
+    if target_role:
+        break
+    print("Invalid target role")
 
 skills = []
 
