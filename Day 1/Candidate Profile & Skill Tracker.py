@@ -73,6 +73,20 @@ while True:
             for skill in skills:
                 print("-",skill)
 
+
+    elif choice=="3":
+        search_skill = input("Enter Skill to search: ").strip()
+        if not search_skill:
+            print("No Skill Found")
+            continue
+
+        if search_skill.lower() in [item.lower() for item in skills]:
+            print("Skill Found")
+
+        else:
+            print("Searched skill not found")
+
+
     elif choice == "5":
         print("Exiting program....")
         break
