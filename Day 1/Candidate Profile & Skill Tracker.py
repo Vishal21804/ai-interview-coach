@@ -1,4 +1,10 @@
-name = input("Enter name of the Candidate: ")
+
+while True:
+    name = input("Enter name of the Candidate: ").strip()
+    if name:
+        break
+    print("Invalid name")
+
 target_role = input("Enter the target role: ")
 
 skills = []
