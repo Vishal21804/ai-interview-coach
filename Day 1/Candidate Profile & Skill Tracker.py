@@ -41,3 +41,15 @@ print("Target Role: ",candidate["target_role"])
 print("skills: ",",".join(candidate["skills"]))
 print("Total Skills: ",len(candidate["skills"]))
 
+while True:
+    print("\n=====Skill Management=====")
+    print("1.Add Skill")
+    print("2.View Skills")
+    print("3.Search Skill")
+    print("4.Remove Skills")
+    print("5.Exit")
+    
+    choice = int(input("Enter your Choice: "))
+    if choice == 5:
+        print("Exiting program....")
+        break
