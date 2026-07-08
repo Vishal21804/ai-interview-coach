@@ -86,6 +86,27 @@ while True:
         else:
             print("Searched skill not found")
 
+    elif choice == "4":
+
+        remove_skill = input("Enter Skill to remove: ")
+
+        if not remove_skill:
+            print("Enter Valid Skill to remove")
+            continue
+
+        Found = False
+        for skill in skills:
+            if skill.lower() == remove_skill.lower():
+                skills.remove(skill)
+                Found = True
+                break
+
+            if Found:
+                print("Removed Successfully")
+            else:
+                print("Not Found")
+
+
 
     elif choice == "5":
         print("Exiting program....")
